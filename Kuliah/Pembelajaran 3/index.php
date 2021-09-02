@@ -1,6 +1,11 @@
 <?php
 require 'functions.php';
 $mahasiswa = query("SELECT * FROM mahasiswa");
+
+// ketika tombol cari ditekan
+if (isset($_POST['cari'])) {
+  $mahasiswa = cari($_POST['keyword']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +29,15 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
       transform: translate(0, 50%);
       font-family: monotype corsiva;
       font-size: 11mm;
+    }
+
+    .search {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
     }
 
     table {
@@ -99,12 +113,27 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 <body>
   <h3>Daftar Mahasiswa</h3>
 
+  <div class="search">
+    <form action="" method="POST">
+      <input type="text" name="keyword" size="35" placeholder="Masukkan kata kunci" autocomplete="off">
+      <button type="submit" name="cari">cari</button>
+    </form>
+  </div><br>
+
   <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>No</th>
       <th>Nama</th>
       <th>Aksi</th>
     </tr>
+
+    <?php if (empty($mahasiswa)) : ?>
+      <tr>
+        <td colspan="3">
+          <p style="color: red;">DATA MAHASISWA TIDAK DITEMUKAN</p>
+        </td>
+      </tr>
+    <?php endif; ?>
 
     <?php $i = 1;
     foreach ($mahasiswa as $mhs) : ?>
