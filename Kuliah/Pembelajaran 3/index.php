@@ -15,6 +15,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
     body {
       margin: 0;
       padding: 0;
+      background-color: rgb(209, 207, 207);
     }
 
     h3 {
@@ -30,6 +31,65 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .button {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 60px;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      box-sizing: border-box;
+      background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+      background-size: 400%;
+      border-radius: 30px;
+    }
+
+    .button:hover {
+      animation: animate 8s linear infinite;
+    }
+
+    @keyframes animate {
+      0% {
+        background-position: 0%;
+      }
+
+      100% {
+        background-position: 400%;
+      }
+    }
+
+    .button:before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      z-index: -1;
+      background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+      background-size: 400%;
+      border-radius: 40px;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .button:hover:before {
+      filter: blur(10px);
+      opacity: 1;
+      animation: animate 8s linear infinite;
     }
   </style>
 
@@ -55,10 +115,15 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
           <a href="detail.php?id=<?= $mhs['id']; ?>">Lihat Detail</a>
         </td>
       </tr>
-    <?php endforeach; ?>
-  </table>
 
-  <a href="tambah.php">tambah data mahasiswa</a>
+    <?php endforeach; ?>
+
+    <!-- <td colspan="3" align="center"> -->
+    <div class="button">
+      <a href="tambah.php">tambah data mahasiswa</a>
+    </div>
+    <!-- </td> -->
+  </table>
 </body>
 
 </html>
