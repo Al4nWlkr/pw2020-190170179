@@ -28,19 +28,38 @@ if (isset($_POST['cari'])) {
 </head>
 
 <body>
-  <a href="logout.php">Log Out</a>
+  <nav>
+    <div class="brand">My Campus</div>
+
+    <div class="search">
+      <form action="" method="POST">
+        <input type="text" name="keyword" size="35" placeholder="Masukkan kata kunci" autocomplete="off" class="keyword">
+        <button type="submit" name="cari" class="tombol-cari">cari</button>
+      </form>
+    </div>
+
+    <div class="button">
+      <a href="tambah.php">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Tambah Data Mahasiswa
+      </a>
+
+      <a href="logout.php">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Log Out
+      </a>
+    </div>
+  </nav>
+
   <h3>Daftar Mahasiswa</h3>
 
-  <div class="search">
-    <form action="" method="POST">
-      <input type="text" name="keyword" size="35" placeholder="Masukkan kata kunci" autocomplete="off" class="keyword">
-      <button type="submit" name="cari" class="tombol-cari">cari</button>
-    </form>
-  </div><br>
-
-  <div class="button">
-    <a href="tambah.php">tambah data mahasiswa</a>
-  </div>
+  <br>
 
   <div class="container">
     <table border="1" align="center" cellpadding="10" cellspacing="0">
