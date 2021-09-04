@@ -99,7 +99,7 @@ if (isset($_POST['cari'])) {
       <a href="https://youtube.com" target="_blank" class="sosmed"><i class="fab fa-youtube"></i></a>
       <a href="https://instagram.com" target="_blank" class="sosmed"><i class="fab fa-instagram"></i></a>
       <a href="https://twitter.com" target="_blank" class="sosmed"><i class="fab fa-twitter"></i></a>
-      <a href="https://facebook.com" target="_blank" rel="nofollow" class="sosmed"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://facebook.com" target="_blank" class="sosmed"><i class="fab fa-facebook-f"></i></a>
     </div>
     <p>&copy; Developed By Bryan Kazuro</p>
   </footer>
