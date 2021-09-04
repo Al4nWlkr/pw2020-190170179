@@ -1,2 +1,4 @@
 # pw2020-190170179
-belajar pemrograman web
+Belajar pemrograman web mengikuti tutorial dari youtube channel Web Programming UNPAS.
+
+Di setiap pembelajaran baru, ada penambahan fitur
