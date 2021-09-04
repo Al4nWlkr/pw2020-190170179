@@ -24,6 +24,11 @@ nav {
   font-size: 2em;
 }
 
+.brand:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 20px #000, 0 0 20px #000, 0 0 40px #000, 0 0 40px #000;
+}
+
 header {
   margin: 40px;
   font-family: als script;

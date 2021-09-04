@@ -13,7 +13,7 @@ nav {
   padding: 10px;
   width: 100vw;
   position: relative;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(129, 126, 126, 0)), to(rgba(0, 0, 0, 0.5)));
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(129, 126, 126, 0.05)), to(rgba(0, 0, 0, 0.5)));
   /* background-color: rgb(129, 126, 126); */
   display: inline-flex;
   justify-content: space-between;
@@ -138,16 +138,57 @@ h3:hover {
   text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 20px #000, 0 0 40px #000;
 }
 
-.search {
-  /* margin: auto 0;
-  margin-right: 11vw; */
+.search-box {
   position: absolute;
-  left: 39%;
-  /* display: flex; */
-  /* justify-content: center; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  /* padding: 10px; */
 }
 
-.container {
+.search-box:hover>.keyword {
+  width: 300px;
+  padding: 0 15px;
+  color: rgb(229, 255, 0);
+  cursor: auto;
+}
+
+.search-box:hover>.tombol {
+  background: white;
+  color: #28E7ED;
+  /* cursor: pointer; */
+}
+
+.keyword {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0;
+}
+
+.tombol {
+  color: rgb(229, 255, 0);
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.tombol-cari .container {
   font-size: 5mm;
 }
 
@@ -158,4 +199,57 @@ h3:hover {
 a {
   color: #000;
   text-decoration: none;
+}
+
+footer {
+  padding: 8px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.03)), to(rgba(0, 0, 0, 0.5)));
+}
+
+.icon {
+  margin-left: 30px;
+  font-size: 6mm;
+}
+
+.sosmed {
+  margin: 0 7px;
+}
+
+.icon .sosmed:nth-child(1):hover {
+  color: red;
+  transition: 1s;
+}
+
+.icon .sosmed:nth-child(2):hover {
+  color: rgb(188, 62, 219);
+  transition: 1s;
+}
+
+.icon .sosmed:nth-child(3):hover {
+  color: rgb(96, 194, 250);
+  transition: 1s;
+}
+
+.icon .sosmed:nth-child(4):hover {
+  color: rgb(15, 83, 230);
+  transition: 1s;
+}
+
+footer p {
+  margin: 10px;
+  position: absolute;
+  left: 50%;
+  font-weight: bold;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+
+footer p:hover {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fff;
+  color: #fff;
 }

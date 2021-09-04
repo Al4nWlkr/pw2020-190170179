@@ -22,6 +22,7 @@ if (isset($_POST['cari'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a1cf9facd4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
 
   <title>Tabel Mahasiswa</title>
@@ -32,8 +33,9 @@ if (isset($_POST['cari'])) {
     <div class="brand">My Campus</div>
 
     <div class="search">
-      <form action="" method="POST">
+      <form action="" method="POST" class="search-box">
         <input type="text" name="keyword" size="35" placeholder="Masukkan kata kunci" autocomplete="off" class="keyword">
+        <div class="tombol"><i class="fas fa-search"></i></div>
         <button type="submit" name="cari" class="tombol-cari">cari</button>
       </form>
     </div>
@@ -91,6 +93,16 @@ if (isset($_POST['cari'])) {
       <?php endforeach; ?>
     </table>
   </div>
+
+  <footer>
+    <div class="icon">
+      <a href="https://youtube.com" target="_blank" class="sosmed"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com" target="_blank" class="sosmed"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank" class="sosmed"><i class="fab fa-twitter"></i></a>
+      <a href="https://facebook.com" target="_blank" rel="nofollow" class="sosmed"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <p>&copy; Developed By Bryan Kazuro</p>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
