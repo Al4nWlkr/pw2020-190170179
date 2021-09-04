@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: a gentle touch;
+  background-color: antiquewhite;
+}
+
+nav {
+  padding: 10px;
+  width: 100vw;
+  position: relative;
+  display: inline-flex;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
+}
+
+.brand {
+  margin-left: 10vw;
+  color: rgb(217, 255, 0);
+  font-family: monotype corsiva;
+  font-size: 2em;
+}
+
+header {
+  margin: 40px;
+  font-family: als script;
+  font-size: 11mm;
+}
+
+h3:hover {
+  color: aliceblue;
+  text-shadow: 0 0 10px rgb(17, 15, 15), 0 0 20px rgb(17, 15, 15), 0 0 20px rgb(17, 15, 15), 0 0 40px rgb(17, 15, 15);
+}
+
+.container {
+  margin: 30px 70px;
+  letter-spacing: 1px;
+  font-size: 7mm;
+}
+
+li {
+  margin: 20px;
+  list-style: none;
+}
+
+li p {
+  display: inline;
+  text-align-last: justify;
+}
+
+li p:hover {
+  font-family: monotype corsiva;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}

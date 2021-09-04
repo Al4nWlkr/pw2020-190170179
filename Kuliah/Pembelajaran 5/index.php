@@ -22,7 +22,7 @@ if (isset($_POST['cari'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <title>Tabel Mahasiswa</title>
 </head>
@@ -57,7 +57,9 @@ if (isset($_POST['cari'])) {
     </div>
   </nav>
 
-  <h3>Daftar Mahasiswa</h3>
+  <header>
+    <h3>Daftar Mahasiswa</h3>
+  </header>
 
   <br>
 
@@ -80,7 +82,7 @@ if (isset($_POST['cari'])) {
       <?php $i = 1;
       foreach ($mahasiswa as $mhs) : ?>
         <tr>
-          <td><?= $i++; ?></td>
+          <td class="number"><?= $i++; ?></td>
           <td><?= $mhs['Nama']; ?></td>
           <td>
             <a href="detail.php?id=<?= $mhs['id']; ?>">Lihat Detail</a>

@@ -1,40 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: rgb(209, 207, 207);
+  font-family: lucida calligraphy;
 }
 
 nav {
   padding: 10px;
-  display: flex;
-  justify-content: flex-end;
-  align-content: center;
+  width: 100vw;
   position: relative;
-  background-color: rgb(129, 126, 126);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(129, 126, 126, 0)), to(rgba(0, 0, 0, 0.5)));
+  /* background-color: rgb(129, 126, 126); */
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .brand {
-  position: relative;
-  left: -25%;
-  color: rgb(178, 204, 33);
+  margin-left: 10vw;
+  color: rgb(217, 255, 0);
   font-family: monotype corsiva;
   font-size: 2em;
 }
 
+.brand:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 20px #000, 0 0 20px #000, 0 0 40px #000, 0 0 40px #000;
+}
+
 .button {
-  margin: auto 15px;
+  margin: auto 30px;
   display: flex !important;
   justify-content: flex-end;
 }
 
 .button a {
-  padding: 7px 30px;
+  padding: 7px 20px;
   position: relative;
   display: inline-block;
-  color: #28e7ed;
+  color: #e5ff00;
   /* text-transform: uppercase; */
-  letter-spacing: 1px;
-  font-size: 13px;
+  letter-spacing: 0.5px;
+  font-family: als script;
+  font-size: 22px;
   overflow: hidden;
   transition: 0.2s;
 }
@@ -42,6 +54,7 @@ nav {
 .button a:hover {
   color: #255784;
   background: #28e7ed;
+  font-weight: bold;
   box-shadow: 0 0 10px #28e7ed, 0 0 40px #28e7ed, 0 0 80px #28e7ed;
   transition-delay: 1s;
 }
@@ -106,26 +119,40 @@ nav {
   transition-delay: 0.75s;
 }
 
-h3 {
+header {
   margin: 2vw;
   display: flex;
   justify-content: center;
   /* transform: translate(0, 50%); */
-  font-family: monotype corsiva;
-  font-size: 11mm;
+  font-family: vivaldi;
+  font-size: 12mm;
+  letter-spacing: 1px;
+}
+
+h3 {
+  margin: 0;
 }
 
 h3:hover {
   color: #fff;
-  text-shadow: 0 0 40px #000, 0 0 10px #000, 0 0 20px #000;
+  text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 20px #000, 0 0 40px #000;
 }
 
 .search {
-  margin: auto 0;
-  margin-right: 11vw;
-  position: relative;
-  display: flex;
-  justify-content: center;
+  /* margin: auto 0;
+  margin-right: 11vw; */
+  position: absolute;
+  left: 39%;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.container {
+  font-size: 5mm;
+}
+
+.number {
+  text-align: center;
 }
 
 a {

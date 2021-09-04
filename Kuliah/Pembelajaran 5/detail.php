@@ -23,23 +23,50 @@ $mhs = query("SELECT * FROM mahasiswa WHERE id=$id");
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/detail.css">
   <title>Detail Mahasiswa</title>
 </head>
 
 <body>
-  <h3>Detail</h3>
-  <ul>
-    <li>NIM : <?= $mhs['NIM']; ?></li>
-    <li>Nama : <?= $mhs['Nama']; ?></li>
-    <li>Email : <?= $mhs['Email']; ?></li>
-    <li>Jurusan : <?= $mhs['Jurusan']; ?></li>
-    <li>
-      <a href="ubah.php?id=<?= $mhs['id']; ?>">ubah</a> | <a href="hapus.php?id=<?= $mhs['id']; ?>" onclick="return confirm('apakah Anda yakin ingin menghapus');">hapus</a>
-    </li>
-    <li>
-      <a href="index.php">kembali ke halaman daftar mahasiswa</a>
-    </li>
-  </ul>
+  <nav>
+    <div class="brand">My Campus</div>
+  </nav>
+
+  <header align="center">
+    <h3>Detail Data Mahasiswa</h3>
+  </header>
+
+  <section class="container">
+    <ul>
+      <li>
+        <p style="font-weight: bold;">NIM :</p>
+        <p><?= $mhs['NIM']; ?></p>
+      </li>
+
+      <li>
+        <p style="font-weight: bold;">Nama :</p>
+        <p><?= $mhs['Nama']; ?></p>
+      </li>
+
+      <li>
+        <p style="font-weight: bold;">Email :</p>
+        <p><?= $mhs['Email']; ?></p>
+      </li>
+
+      <li>
+        <p style="font-weight: bold;">Jurusan :</p>
+        <p><?= $mhs['Jurusan']; ?></p>
+      </li>
+
+      <li>
+        <a href="ubah.php?id=<?= $mhs['id']; ?>">ubah</a> | <a href="hapus.php?id=<?= $mhs['id']; ?>" onclick="return confirm('apakah Anda yakin ingin menghapus');">hapus</a>
+      </li>
+
+      <li>
+        <a href="index.php">kembali ke halaman daftar mahasiswa</a>
+      </li>
+    </ul>
+  </section>
 </body>
 
 </html>
