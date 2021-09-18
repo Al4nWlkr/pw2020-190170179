@@ -13,6 +13,7 @@ function query($query)
 
   $result = mysqli_query($conn, $query);
 
+  // Jika data dari tabel hanya 1
   if (mysqli_num_rows($result) == 1) {
     return mysqli_fetch_assoc($result);
   }

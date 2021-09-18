@@ -59,43 +59,59 @@ if (isset($_POST['cari'])) {
     </div>
   </nav>
 
-  <header>
-    <h3>Daftar Mahasiswa</h3>
-  </header>
+  <!-- Background -->
+  <section>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="box">
+      <div class="square" style="--i:0"></div>
+      <div class="square" style="--i:1"></div>
+      <div class="square" style="--i:2"></div>
+      <div class="square" style="--i:3"></div>
+      <div class="square" style="--i:4"></div>
+      <div class="container">
+        <div class="form">
+          <header>
+            <h3>Daftar Mahasiswa</h3>
+          </header>
 
-  <br>
+          <br>
 
-  <div class="container">
-    <table border="1" align="center" cellpadding="10" cellspacing="0">
-      <tr>
-        <th>No</th>
-        <th>Nama</th>
-        <th>Aksi</th>
-      </tr>
+          <table border="1" align="center" cellpadding="10" cellspacing="0">
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Aksi</th>
+            </tr>
 
-      <?php if (empty($mahasiswa)) : ?>
-        <tr>
-          <td colspan="3">
-            <p style="color: red;">DATA MAHASISWA TIDAK DITEMUKAN</p>
-          </td>
-        </tr>
-      <?php endif; ?>
+            <?php if (empty($mahasiswa)) : ?>
+              <tr>
+                <td colspan="3">
+                  <p style="color: red;">DATA MAHASISWA TIDAK DITEMUKAN</p>
+                </td>
+              </tr>
+            <?php endif; ?>
 
-      <?php $i = 1;
-      foreach ($mahasiswa as $mhs) : ?>
-        <tr>
-          <td class="number"><?= $i++; ?></td>
-          <td><?= $mhs['Nama']; ?></td>
-          <td>
-            <a href="detail.php?id=<?= $mhs['id']; ?>">Lihat Detail</a>
-          </td>
-        </tr>
-      <?php endforeach; ?>
-    </table>
-  </div>
+            <?php $i = 1;
+            foreach ($mahasiswa as $mhs) : ?>
+              <tr>
+                <td class="number"><?= $i++; ?></td>
+                <td><?= $mhs['Nama']; ?></td>
+                <td>
+                  <a href="detail.php?id=<?= $mhs['id']; ?>">Lihat Detail</a>
+                </td>
+              </tr>
+            <?php endforeach; ?>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Background -->
 
   <footer>
-    <div class="icon">
+    <div class="icon" align="left">
       <a href="https://youtube.com" target="_blank" class="sosmed"><i class="fab fa-youtube"></i></a>
       <a href="https://instagram.com" target="_blank" class="sosmed"><i class="fab fa-instagram"></i></a>
       <a href="https://twitter.com" target="_blank" class="sosmed"><i class="fab fa-twitter"></i></a>
