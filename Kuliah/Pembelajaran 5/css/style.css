@@ -290,13 +290,11 @@ h3:hover {
   width: 300px;
   padding: 0 15px;
   color: rgb(229, 255, 0);
-  cursor: auto;
 }
 
 .search-box:hover>.tombol {
   background: white;
   color: #28E7ED;
-  /* cursor: pointer; */
 }
 
 .keyword {
